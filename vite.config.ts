@@ -4,8 +4,12 @@ import adapter from '@hono/vite-dev-server/cloudflare'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: '/',
-})
-
-  ]
+  base: '/', // Cloudflare Pages는 보통 '/'가 정답
+  plugins: [
+    build(),
+    devServer({
+      adapter,
+      entry: 'src/index.tsx',
+    }),
+  ],
 })
