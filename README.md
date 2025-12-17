@@ -232,4 +232,4 @@ npx wrangler pages secret put API_KEY --project-name webapp
 ---
 
 **Made with ❤️ using Hono + Cloudflare Pages**
-.
+..
